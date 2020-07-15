@@ -6,17 +6,29 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-<body onload="refreshTime()">
+<body onload="refreshTime(),daysUntilChristmas()">
 
 
 <h1 id="time"></h1>
 
 
  Type in a year<br> <input type="number" id="year">
-<button id="btn" onclick="checkYear()">Submit</button>
+<button id="btn" onclick="checkYear(), sundayOnFirst()" >Submit</button>
 
 <h2 id="leapYear"></h2>
 
+<h3 id="sunday"></h3>
+
+Type in a number between 1-10<br> <input type="number" id="guess">
+<button onclick="randomCheck()"> Submit</button>
+
+<h4 id="Number"></h4>
+
+<div id="board"></div>
+
+Type in a number<br> <input type="number" id="reverse">
+<button onclick="reverse()">Submit</button>
+<h3 id="revnum"></h3>
 
 <script src="index.js"></script>
 </body>
