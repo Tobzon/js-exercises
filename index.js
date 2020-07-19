@@ -121,3 +121,95 @@ function reverse() {
 }
 
 //---------------------------------------------------------------------------------------------------
+
+
+
+function textManipulation() {
+    var word = document.getElementById("word")
+
+    var text = document.getElementById("text")
+
+    var arr = word.value.toString().replace(/\W/g,'').split('').map(String)
+
+    var run = false
+
+    var start = 0
+    var index = 0
+     var tmp = []
+    while (!run){
+
+              for (index; index<arr.length;index++){
+
+                  tmp.push(arr[index])
+
+              }
+              start++
+              index = start
+        if (start == arr.length){
+            run = true
+            text.innerHTML = tmp.toString()
+        }
+    }
+}
+//---------------------------------------------------------------------------------------------------
+
+function textManipulation2() {
+    var word = document.getElementById("wordd")
+    var text = document.getElementById("textt")
+
+      var arr = word.value.toString().replace(/\W/g,'').split('').map(String)
+
+    
+    text.innerHTML =  arr.sort().toString().replace(/\W/g,'')
+
+}
+//---------------------------------------------------------------------------------------------------
+
+function textManipulation3() {
+    var word = document.getElementById("worddd")
+    var text = document.getElementById("texttt")
+
+    var string = word.value
+
+    var longestWord = string.split(' ').reduce(function (longest,current) {
+        return current.length > longest.length ? current : longest
+
+    }, "")
+
+
+    text.innerHTML = string.charAt(0).toUpperCase() + string.slice(1) + ", The longest word is "+ longestWord
+
+}
+//---------------------------------------------------------------------------------------------------
+function prime() {
+    var number = document.getElementById("num")
+    var text = document.getElementById("num1")
+
+    var val = number.value
+    
+    
+        if (  val% 2 == 0){
+             text.innerHTML = " Number is not a prime"
+        }
+        else 
+        text.innerHTML = " Number is a prime"
+
+
+}
+//---------------------------------------------------------------------------------------------------
+function classN() {
+    var any = document.getElementById("any")
+    var text = document.getElementById("anything")
+
+
+
+
+}
+var toType  = function (obj) {
+
+    return ({}).toString().call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
+}
+(function () {
+    console.log(typeof arguments)
+
+})
